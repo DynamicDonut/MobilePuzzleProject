@@ -1,0 +1,727 @@
+fileFormatVersion: 2
+guid: 9363187febd696446befa122b7bff337
+timeCreated: 1446514651
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SNES - Panel de Pon - Blocks_0
+    21300002: SNES - Panel de Pon - Blocks_1
+    21300004: SNES - Panel de Pon - Blocks_2
+    21300006: SNES - Panel de Pon - Blocks_3
+    21300008: SNES - Panel de Pon - Blocks_4
+    21300010: SNES - Panel de Pon - Blocks_5
+    21300012: SNES - Panel de Pon - Blocks_6
+    21300014: SNES - Panel de Pon - Blocks_7
+    21300016: SNES - Panel de Pon - Blocks_8
+    21300018: SNES - Panel de Pon - Blocks_9
+    21300020: SNES - Panel de Pon - Blocks_10
+    21300022: SNES - Panel de Pon - Blocks_11
+    21300024: SNES - Panel de Pon - Blocks_12
+    21300026: SNES - Panel de Pon - Blocks_13
+    21300028: SNES - Panel de Pon - Blocks_14
+    21300030: SNES - Panel de Pon - Blocks_15
+    21300032: SNES - Panel de Pon - Blocks_16
+    21300034: SNES - Panel de Pon - Blocks_17
+    21300036: SNES - Panel de Pon - Blocks_18
+    21300038: SNES - Panel de Pon - Blocks_19
+    21300040: SNES - Panel de Pon - Blocks_20
+    21300042: SNES - Panel de Pon - Blocks_21
+    21300044: SNES - Panel de Pon - Blocks_22
+    21300046: SNES - Panel de Pon - Blocks_23
+    21300048: SNES - Panel de Pon - Blocks_24
+    21300050: SNES - Panel de Pon - Blocks_25
+    21300052: SNES - Panel de Pon - Blocks_26
+    21300054: SNES - Panel de Pon - Blocks_27
+    21300056: SNES - Panel de Pon - Blocks_28
+    21300058: SNES - Panel de Pon - Blocks_29
+    21300060: SNES - Panel de Pon - Blocks_30
+    21300062: SNES - Panel de Pon - Blocks_31
+    21300064: SNES - Panel de Pon - Blocks_32
+    21300066: SNES - Panel de Pon - Blocks_33
+    21300068: SNES - Panel de Pon - Blocks_34
+    21300070: SNES - Panel de Pon - Blocks_35
+    21300072: SNES - Panel de Pon - Blocks_36
+    21300074: SNES - Panel de Pon - Blocks_37
+    21300076: SNES - Panel de Pon - Blocks_38
+    21300078: SNES - Panel de Pon - Blocks_39
+    21300080: SNES - Panel de Pon - Blocks_40
+    21300082: SNES - Panel de Pon - Blocks_41
+    21300084: SNES - Panel de Pon - Blocks_42
+    21300086: SNES - Panel de Pon - Blocks_43
+    21300088: SNES - Panel de Pon - Blocks_44
+    21300090: SNES - Panel de Pon - Blocks_45
+    21300092: SNES - Panel de Pon - Blocks_46
+    21300094: SNES - Panel de Pon - Blocks_47
+    21300096: SNES - Panel de Pon - Blocks_48
+    21300098: SNES - Panel de Pon - Blocks_49
+    21300100: SNES - Panel de Pon - Blocks_50
+    21300102: SNES - Panel de Pon - Blocks_51
+    21300104: SNES - Panel de Pon - Blocks_52
+    21300106: SNES - Panel de Pon - Blocks_53
+    21300108: SNES - Panel de Pon - Blocks_54
+    21300110: SNES - Panel de Pon - Blocks_55
+    21300112: SNES - Panel de Pon - Blocks_56
+    21300114: SNES - Panel de Pon - Blocks_57
+    21300116: SNES - Panel de Pon - Blocks_58
+    21300118: SNES - Panel de Pon - Blocks_59
+    21300120: SNES - Panel de Pon - Blocks_60
+    21300122: SNES - Panel de Pon - Blocks_61
+    21300124: SNES - Panel de Pon - Blocks_62
+    21300126: SNES - Panel de Pon - Blocks_63
+    21300128: SNES - Panel de Pon - Blocks_64
+    21300130: SNES - Panel de Pon - Blocks_65
+    21300132: SNES - Panel de Pon - Blocks_66
+    21300134: SNES - Panel de Pon - Blocks_67
+    21300136: SNES - Panel de Pon - Blocks_68
+    21300138: SNES - Panel de Pon - Blocks_69
+    21300140: SNES - Panel de Pon - Blocks_70
+    21300142: SNES - Panel de Pon - Blocks_71
+    21300144: SNES - Panel de Pon - Blocks_72
+    21300146: SNES - Panel de Pon - Blocks_73
+    21300148: SNES - Panel de Pon - Blocks_74
+    21300150: SNES - Panel de Pon - Blocks_75
+    21300152: SNES - Panel de Pon - Blocks_76
+    21300154: SNES - Panel de Pon - Blocks_77
+    21300156: SNES - Panel de Pon - Blocks_78
+    21300158: SNES - Panel de Pon - Blocks_79
+    21300160: SNES - Panel de Pon - Blocks_80
+    21300162: SNES - Panel de Pon - Blocks_81
+    21300164: SNES - Panel de Pon - Blocks_82
+    21300166: SNES - Panel de Pon - Blocks_83
+    21300168: SNES - Panel de Pon - Blocks_84
+    21300170: SNES - Panel de Pon - Blocks_85
+    21300172: SNES - Panel de Pon - Blocks_86
+    21300174: SNES - Panel de Pon - Blocks_87
+    21300176: SNES - Panel de Pon - Blocks_88
+    21300178: SNES - Panel de Pon - Blocks_89
+    21300180: SNES - Panel de Pon - Blocks_90
+    21300182: SNES - Panel de Pon - Blocks_91
+    21300184: SNES - Panel de Pon - Blocks_92
+    21300186: SNES - Panel de Pon - Blocks_93
+    21300188: SNES - Panel de Pon - Blocks_94
+    21300190: SNES - Panel de Pon - Blocks_95
+    21300192: SNES - Panel de Pon - Blocks_96
+    21300194: SNES - Panel de Pon - Blocks_97
+    21300196: SNES - Panel de Pon - Blocks_98
+    21300198: SNES - Panel de Pon - Blocks_99
+    21300200: SNES - Panel de Pon - Blocks_100
+    21300202: SNES - Panel de Pon - Blocks_101
+    21300204: SNES - Panel de Pon - Blocks_102
+    21300206: SNES - Panel de Pon - Blocks_103
+    21300208: SNES - Panel de Pon - Blocks_104
+    21300210: SNES - Panel de Pon - Blocks_105
+    21300212: SNES - Panel de Pon - Blocks_106
+    21300214: SNES - Panel de Pon - Blocks_107
+    21300216: SNES - Panel de Pon - Blocks_108
+    21300218: SNES - Panel de Pon - Blocks_109
+    21300220: SNES - Panel de Pon - Blocks_110
+    21300222: SNES - Panel de Pon - Blocks_111
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -5
+  maxTextureSize: 512
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 26
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 1
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: SNES - Panel de Pon - Blocks_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 135
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_1
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 135
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_2
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 135
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_3
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 135
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 135
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_5
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 135
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_6
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 135
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_14
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 116
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_15
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 116
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_16
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 116
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_17
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 116
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_18
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 116
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_19
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 116
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_20
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 116
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_28
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 97
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_29
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 97
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_30
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 97
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_31
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 97
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_32
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 97
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_33
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 97
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_34
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 97
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_42
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 78
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_43
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 78
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_44
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 78
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_45
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 78
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_46
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 78
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_47
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 78
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_48
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 78
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_56
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 59
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_57
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 59
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_58
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 59
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_59
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 59
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_60
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 59
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_61
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 59
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_62
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 59
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_70
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 40
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_71
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 40
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_72
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 40
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_73
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 40
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_74
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 40
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_75
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 40
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_76
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 40
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_84
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 21
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_85
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 21
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_86
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 21
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_87
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 21
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_88
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 21
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_89
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 21
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_90
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 21
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_98
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_99
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_100
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_101
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_102
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_103
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SNES - Panel de Pon - Blocks_104
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 2
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
