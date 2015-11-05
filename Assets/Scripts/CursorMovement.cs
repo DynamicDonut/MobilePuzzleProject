@@ -14,22 +14,32 @@ public class CursorMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (MovementType == 0) {
-			if (Input.GetKeyUp(KeyCode.LeftArrow)){
-				transform.position = transform.position + Vector3.left * MainScript.tileW;
-			} else if (Input.GetKeyUp(KeyCode.RightArrow)){
-				transform.position = transform.position + Vector3.right * MainScript.tileW;
-			} else if (Input.GetKeyUp(KeyCode.UpArrow)){
-				transform.position = transform.position + Vector3.up * MainScript.tileH;
-			} else if (Input.GetKeyUp(KeyCode.DownArrow)){
-				transform.position = transform.position + Vector3.down * MainScript.tileH;
-			}
-
 			if (Input.GetKeyUp(KeyCode.Space)){
+				MainScript.CurrentSelectedBlocks(transform.position);
+			} 
 
+			if (Input.GetKeyUp(KeyCode.LeftArrow)){
+				if (transform.position.x > MainScript.leftBound + MainScript.tileW/2){
+					transform.position = transform.position + Vector3.left * MainScript.tileW;
+				}
+			} else if (Input.GetKeyUp(KeyCode.RightArrow)){
+				if (transform.position.x < MainScript.rightBound - MainScript.tileW/2){
+					transform.position = transform.position + Vector3.right * MainScript.tileW;
+				}
+			} else if (Input.GetKeyUp(KeyCode.UpArrow)){
+				if (transform.position.y < MainScript.topBound){
+					transform.position = transform.position + Vector3.up * MainScript.tileH;
+				}
+			} else if (Input.GetKeyUp(KeyCode.DownArrow)){
+				if (transform.position.y > MainScript.bottomBound){
+					transform.position = transform.position + Vector3.down * MainScript.tileH;
+				}
 			}
 		} else if (MovementType == 1) {
 		} else if (MovementType == 2) {
 		} else if (MovementType == 3) {
 		}
+
+		//Debug.Log (transform.position);
 	}
 }
