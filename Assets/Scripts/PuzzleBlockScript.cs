@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PuzzleBlockScript : MonoBehaviour {
 	public Sprite[] PuzzBlockColors;
+	public int BlockColorInt;
+	public int myRow; public int myCol;
 	GameObject myParent;
 	SpriteRenderer mySprite;
 
@@ -10,12 +12,12 @@ public class PuzzleBlockScript : MonoBehaviour {
 	void Start () {
 		myParent = transform.gameObject;
 		mySprite = myParent.GetComponent<SpriteRenderer>();
-
-		mySprite.sprite = PuzzBlockColors [Random.Range (0, 5)];
+		mySprite.sprite = PuzzBlockColors [BlockColorInt];
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//Debug.Log (this.transform.gameObject);
+		mySprite.sprite = PuzzBlockColors [BlockColorInt];
+		this.name = myRow + "," + myCol;
 	}
 }
