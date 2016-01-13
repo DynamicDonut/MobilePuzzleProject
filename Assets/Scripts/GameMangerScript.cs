@@ -5,12 +5,14 @@ public class GameMangerScript : MonoBehaviour {
 	public GameObject PuzzBlock;
 	public GameObject PuzzCursor;
 	public GameObject LeftBlock; public GameObject RightBlock; 
-	GameObject BlockParent;
+	public GameObject BlockParent;
 	public int numOfColors = 6;
-	bool startingClear = true;
+	public AnimationCurve BlockMoveSpeed;
+	//bool startingClear = true;
 
 	public float tileW; public float tileH;
 	Vector3 StartPos = Vector3.zero;
+	Vector2 LeftPos; Vector3 RightPos;
 	int numCol = 6;
 	int numRow = 5;
 
@@ -36,17 +38,14 @@ public class GameMangerScript : MonoBehaviour {
 		Camera.main.transform.position = cameraPos;
 	}
 
-	void Update () {
+	void FixedUpdate () {
 		if (Input.GetKeyUp (KeyCode.LeftAlt)) {
-			//Debug.Log(BlockParent.transform.GetChild(6).name);
-			ClearBlocks();
 		}
 	}
 
-	public void CurrentSelectedBlocks(Vector3 PuzzCursorPos){
-		Vector3 LeftPos = Vector3.zero; 
-		Vector3 RightPos = Vector3.zero;
-		for (int i = 0; i < BlockParent.transform.childCount; i++) {
+	public IEnumerator CurrentSelectedBlocks(Vector3 myPos, float moveTime){
+		float timer = 0.0f;
+		/*for (int i = 0; i < BlockParent.transform.childCount; i++) {
 			Transform currBlock = BlockParent.transform.GetChild(i);
 			if (PuzzCursorPos == currBlock.position - Vector3.left * tileW/2){
 				LeftBlock = currBlock.gameObject;
@@ -58,10 +57,31 @@ public class GameMangerScript : MonoBehaviour {
 				RightPos = RightBlock.transform.position;
 				RightBlock.GetComponent<PuzzleBlockScript>().myCol--;
 			}
+		}*/
+
+		for (int i = 0; i < BlockParent.transform.childCount; i++) {
+			Transform currBlock = BlockParent.transform.GetChild (i);
+			if (myPos == currBlock.position - Vector3.left * tileW / 2) {
+				LeftBlock = currBlock.gameObject;
+				LeftPos = LeftBlock.transform.position;
+				LeftBlock.GetComponent<PuzzleBlockScript> ().myCol++;
+			}
+			if (myPos == currBlock.position - Vector3.right * tileW / 2) {
+				RightBlock = currBlock.gameObject;
+				RightPos = RightBlock.transform.position;
+				RightBlock.GetComponent<PuzzleBlockScript> ().myCol--;
+			}
 		}
-		LeftBlock.transform.position = Vector3.MoveTowards (LeftBlock.transform.position, RightPos, tileW * (Time.time * 0.25f));
-		RightBlock.transform.position = Vector3.MoveTowards (RightBlock.transform.position, LeftPos, tileW * (Time.time * 0.25f));
-		Debug.Log ("It ran");
+
+		//LeftBlock.transform.position = Vector3.MoveTowards (LeftBlock.transform.position, RightPos, tileW);
+		//RightBlock.transform.position = Vector3.MoveTowards (RightBlock.transform.position, LeftPos, tileW);
+
+		while (timer <= moveTime) {
+			LeftBlock.transform.position = Vector3.Lerp (LeftBlock.transform.position, RightPos, BlockMoveSpeed.Evaluate(timer/moveTime));
+			RightBlock.transform.position = Vector3.Lerp (RightBlock.transform.position, LeftPos, BlockMoveSpeed.Evaluate(timer/moveTime));
+			timer += Time.deltaTime;
+			yield return null;
+		}
 	}
 
 	void PuzzleBlockSpawning(){
@@ -88,19 +108,6 @@ public class GameMangerScript : MonoBehaviour {
 				if (j>=2){
 					CheckBlocks(newBlock, "left", i, j);
 				}
-
-				/*
-				GameObject bottomItem = GameObject.Find((i-1)+","+j);
-				if (newBlock.GetComponent<PuzzleBlockScript>().BlockColorInt == bottomItem.GetComponent<PuzzleBlockScript>().BlockColorInt){
-					newBlock.GetComponent<PuzzleBlockScript>().BlockColorInt = Random.Range(0,numOfColors);
-				}
-					
-				if(j>=2){
-					//GameObject leftItem = GameObject.Find(i+","+(j-1));
-					//if (newBlock.GetComponent<PuzzleBlockScript>().BlockColorInt == leftItem.GetComponent<PuzzleBlockScript>().BlockColorInt){}
-					CheckBlocks("left", i, j);
-				}
-				*/
 				StartPos.x += tileW;
 			}
 			StartPos.x = 0.0f;
@@ -130,13 +137,6 @@ public class GameMangerScript : MonoBehaviour {
 	}
 
 	void ClearBlocks(){
-		for (int i=1; i<BlockParent.transform.childCount; i++) {
-			Transform currBlock = BlockParent.transform.GetChild(i);
 
-			if(!(i%6 == 0)){
-				//Check the next two blocks over.
-				//If they have the same color as me, delete me and the two-four blocks.
-			}
-		}
 	}
 }
