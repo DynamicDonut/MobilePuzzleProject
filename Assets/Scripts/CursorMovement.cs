@@ -9,7 +9,6 @@ public class CursorMovement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		MainScript = GameObject.Find ("GameManager").GetComponent<GameMangerScript> ();
-
 	}
 	
 	// Update is called once per frame
@@ -36,32 +35,15 @@ public class CursorMovement : MonoBehaviour {
 					transform.position = transform.position + Vector3.down * MainScript.tileH;
 				}
 			}
-		} else if (MovementType == 1) {
+		}
+
+        /*
+        else if (MovementType == 1) {
 		} else if (MovementType == 2) {
 		} else if (MovementType == 3) {
 		}
+        */
 
 		//Debug.Log (transform.position);
-	}
-
-	void SelectedBlocks(Vector3 myPos){
-		for (int i = 0; i < MainScript.BlockParent.transform.childCount; i++) {
-			Transform currBlock = MainScript.BlockParent.transform.GetChild(i);
-			if (myPos == currBlock.position - Vector3.left * MainScript.tileW/2){
-				currBlock.GetComponent<PuzzleBlockScript>().myCol++;
-				LeftSelectedBlock = currBlock.gameObject;
-			}
-			if (myPos == currBlock.position - Vector3.right * MainScript.tileW/2){
-				currBlock.GetComponent<PuzzleBlockScript>().myCol--;
-				RightSelectedBlock = currBlock.gameObject;
-			}
-			/*
-			if (PuzzCursorPos == currBlock.position - Vector3.right * tileW/2){
-				RightBlock = currBlock.gameObject;
-				RightPos = RightBlock.transform.position;
-				RightBlock.GetComponent<PuzzleBlockScript>().myCol--;
-			}
-			*/
-		}
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class GameMangerScript : MonoBehaviour {
 	public GameObject PuzzBlock;
@@ -8,8 +9,10 @@ public class GameMangerScript : MonoBehaviour {
 	public GameObject BlockParent;
 	public int numOfColors = 6;
 	public AnimationCurve BlockMoveSpeed;
-	//bool startingClear = true;
+    public List<PuzzleBlockScript> BlockList;
 
+    float PuzzAddInterval = 2f; float lastPuzzTime;
+    bool stopMove;
 	public float tileW; public float tileH;
 	Vector3 StartPos = Vector3.zero;
 	Vector2 LeftPos; Vector3 RightPos;
@@ -35,29 +38,20 @@ public class GameMangerScript : MonoBehaviour {
 
 		topBound = bottomBound + tileH * (numRow + 4);
 		GameObject GameCursor = (GameObject)Instantiate(PuzzCursor, (Vector2.right * tileW/2), transform.rotation);
+        GameCursor.name = "Player Cursor";
 		Camera.main.transform.position = cameraPos;
 	}
 
 	void FixedUpdate () {
+        AddBlocks();
+
 		if (Input.GetKeyUp (KeyCode.LeftAlt)) {
 		}
 	}
 
 	public IEnumerator CurrentSelectedBlocks(Vector3 myPos, float moveTime){
 		float timer = 0.0f;
-		/*for (int i = 0; i < BlockParent.transform.childCount; i++) {
-			Transform currBlock = BlockParent.transform.GetChild(i);
-			if (PuzzCursorPos == currBlock.position - Vector3.left * tileW/2){
-				LeftBlock = currBlock.gameObject;
-				LeftPos = LeftBlock.transform.position;
-				LeftBlock.GetComponent<PuzzleBlockScript>().myCol++;
-			}
-			if (PuzzCursorPos == currBlock.position - Vector3.right * tileW/2){
-				RightBlock = currBlock.gameObject;
-				RightPos = RightBlock.transform.position;
-				RightBlock.GetComponent<PuzzleBlockScript>().myCol--;
-			}
-		}*/
+        stopMove = true;
 
 		for (int i = 0; i < BlockParent.transform.childCount; i++) {
 			Transform currBlock = BlockParent.transform.GetChild (i);
@@ -73,15 +67,13 @@ public class GameMangerScript : MonoBehaviour {
 			}
 		}
 
-		//LeftBlock.transform.position = Vector3.MoveTowards (LeftBlock.transform.position, RightPos, tileW);
-		//RightBlock.transform.position = Vector3.MoveTowards (RightBlock.transform.position, LeftPos, tileW);
-
 		while (timer <= moveTime) {
 			LeftBlock.transform.position = Vector3.Lerp (LeftBlock.transform.position, RightPos, BlockMoveSpeed.Evaluate(timer/moveTime));
 			RightBlock.transform.position = Vector3.Lerp (RightBlock.transform.position, LeftPos, BlockMoveSpeed.Evaluate(timer/moveTime));
 			timer += Time.deltaTime;
 			yield return null;
 		}
+        stopMove= false;
 	}
 
 	void PuzzleBlockSpawning(){
@@ -94,6 +86,8 @@ public class GameMangerScript : MonoBehaviour {
 				newBlock.transform.position = StartPos;
 				newBlock.transform.name = i+","+j;
 				newBlock.transform.parent = BlockParent.transform;
+                BlockList.Add(newBlock.GetComponent<PuzzleBlockScript>());
+
 				if (i==1 && j==1){
 					leftBound = newBlock.transform.position.x;
 					bottomBound = newBlock.transform.position.y;
@@ -136,7 +130,22 @@ public class GameMangerScript : MonoBehaviour {
 		}
 	}
 
-	void ClearBlocks(){
+    void AddBlocks() {
+        GameObject bottomBlock = GameObject.Find("1,1");
+        GameObject myCursor = GameObject.Find("Player Cursor");
+        if (!stopMove) {
+            if (Time.time > lastPuzzTime + PuzzAddInterval) {
+                foreach (PuzzleBlockScript pBlock in BlockList) {
+                    pBlock.transform.position = new Vector3(pBlock.transform.position.x, pBlock.transform.position.y + 0.4f, pBlock.transform.position.z);
+                }
+                myCursor.transform.position = new Vector3(myCursor.transform.position.x, myCursor.transform.position.y + 0.4f, myCursor.transform.position.z);
+                lastPuzzTime = Time.time;
+            }
+        }
+    }
 
-	}
+    void RenameBlocks()
+    {
+
+    }
 }
