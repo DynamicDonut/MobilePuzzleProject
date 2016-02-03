@@ -54,34 +54,6 @@ public class GameMangerScript : MonoBehaviour {
 	public IEnumerator CurrentSelectedBlocks(GameObject LBlock, GameObject RBlock, float moveTime){
 		float timer = 0.0f;
 		GameCursor.GetComponent<CursorMovement> ().cursorMove = false;
-        /*for (int i = 0; i < BlockParent.transform.childCount; i++) {
-			Transform currBlock = BlockParent.transform.GetChild(i);
-			if (PuzzCursorPos == currBlock.position - Vector3.left * tileW/2){
-				LeftBlock = currBlock.gameObject;
-				LeftPos = LeftBlock.transform.position;
-				LeftBlock.GetComponent<PuzzleBlockScript>().myCol++;
-			}
-			if (PuzzCursorPos == currBlock.position - Vector3.right * tileW/2){
-				RightBlock = currBlock.gameObject;
-				RightPos = RightBlock.transform.position;
-				RightBlock.GetComponent<PuzzleBlockScript>().myCol--;
-			}
-		}
-
-		for (int i = 0; i < BlockParent.transform.childCount; i++) {
-			Transform currBlock = BlockParent.transform.GetChild (i);
-			if (myPos == currBlock.position - Vector3.left * tileW / 2) {
-				LBlock = currBlock.gameObject;
-				LeftPos = LBlock.transform.position;
-				LBlock.GetComponent<PuzzleBlockScript> ().myCol++;
-			}
-			if (myPos == currBlock.position - Vector3.right * tileW / 2) {
-				RBlock = currBlock.gameObject;
-				RightPos = RBlock.transform.position;
-				RBlock.GetComponent<PuzzleBlockScript> ().myCol--;
-  			}
-    	}*/
-
         LeftPos = LBlock.transform.position;
 		RightPos = RBlock.transform.position;
 
@@ -169,3 +141,34 @@ public class GameMangerScript : MonoBehaviour {
         }
     }
 }
+
+/*
+ * These were in the CurrentSelectedBlocks enum.x
+ * 
+ * for (int i = 0; i < BlockParent.transform.childCount; i++) {
+			Transform currBlock = BlockParent.transform.GetChild(i);
+			if (PuzzCursorPos == currBlock.position - Vector3.left * tileW/2){
+				LeftBlock = currBlock.gameObject;
+				LeftPos = LeftBlock.transform.position;
+				LeftBlock.GetComponent<PuzzleBlockScript>().myCol++;
+			}
+			if (PuzzCursorPos == currBlock.position - Vector3.right * tileW/2){
+				RightBlock = currBlock.gameObject;
+				RightPos = RightBlock.transform.position;
+				RightBlock.GetComponent<PuzzleBlockScript>().myCol--;
+			}
+		}
+
+		for (int i = 0; i < BlockParent.transform.childCount; i++) {
+			Transform currBlock = BlockParent.transform.GetChild (i);
+			if (myPos == currBlock.position - Vector3.left * tileW / 2) {
+				LBlock = currBlock.gameObject;
+				LeftPos = LBlock.transform.position;
+				LBlock.GetComponent<PuzzleBlockScript> ().myCol++;
+			}
+			if (myPos == currBlock.position - Vector3.right * tileW / 2) {
+				RBlock = currBlock.gameObject;
+				RightPos = RBlock.transform.position;
+				RBlock.GetComponent<PuzzleBlockScript> ().myCol--;
+  			}
+    	}*/
