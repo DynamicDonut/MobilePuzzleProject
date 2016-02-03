@@ -15,42 +15,25 @@ public class PuzzleBlockScript : MonoBehaviour {
         myParent = transform.gameObject;
         mySprite = myParent.GetComponent<SpriteRenderer>();
         mySprite.sprite = PuzzBlockColors[BlockColorInt];
-    }
 
-    // Update is called once per frame
-    void Update() {
-        mySprite.sprite = PuzzBlockColors[BlockColorInt];
-        this.name = myRow + "," + myCol;
-        //CheckAdjacentBlocks(); 
         CheckAdjBlocks(Vector2.left);
         CheckAdjBlocks(Vector2.up);
         CheckAdjBlocks(Vector2.right);
         CheckAdjBlocks(Vector2.down);
     }
 
-    void CheckAdjacentBlocks() {
-        RaycastHit2D leftBlockHit = Physics2D.Raycast(transform.position, Vector2.left, 2f);
-        RaycastHit2D topBlockHit = Physics2D.Raycast(transform.position, Vector2.up, 2f);
-        RaycastHit2D rightBlockHit = Physics2D.Raycast(transform.position, Vector2.right, 2f);
-        RaycastHit2D bottomBlockHit = Physics2D.Raycast(transform.position, Vector2.down, 2f);
-
-        if (leftBlockHit.collider != null && !AdjPuzzBlocks.Contains(leftBlockHit.collider.transform)) {
-           AdjPuzzBlocks.Add(leftBlockHit.collider.transform);
-        }
-        if (topBlockHit.collider != null && !AdjPuzzBlocks.Contains(topBlockHit.collider.transform)) {
-            AdjPuzzBlocks.Add(topBlockHit.collider.transform);
-        }
-        if (rightBlockHit.collider != null && !AdjPuzzBlocks.Contains(rightBlockHit.collider.transform)) {
-            AdjPuzzBlocks.Add(rightBlockHit.collider.transform);
-        }
-        if (bottomBlockHit.collider != null && !AdjPuzzBlocks.Contains(bottomBlockHit.collider.transform)) {
-            AdjPuzzBlocks.Add(bottomBlockHit.collider.transform);
-        }
+    // Update is called once per frame
+    void Update() {
+        mySprite.sprite = PuzzBlockColors[BlockColorInt];
+        this.name = myRow + "," + myCol; 
     }
 
-    void CheckAdjBlocks(Vector2 direction) {
+    public void CheckAdjBlocks(Vector2 direction) {
         Vector3 modifier = Vector2.zero;
         if(direction == Vector2.left || direction == Vector2.right) {
+            if (direction == Vector2.left) {
+                AdjPuzzBlocks.Clear();
+            }
             modifier = direction * GetComponent<BoxCollider2D>().bounds.size.x;
         } else if (direction == Vector2.up|| direction == Vector2.down) {
             modifier = direction * GetComponent<BoxCollider2D>().bounds.size.y;

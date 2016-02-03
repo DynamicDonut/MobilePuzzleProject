@@ -19,10 +19,9 @@ public class CursorMovement : MonoBehaviour {
 			if (MovementType == 0) {
 				if (Input.GetKeyUp (KeyCode.Space)) {
 					StartCoroutine (MainScript.CurrentSelectedBlocks (LeftSelectedBlock, RightSelectedBlock, 0.25f));
-					Debug.Log (this.transform.position);
-				} 
+                }
 
-				if (Input.GetKeyUp (KeyCode.LeftArrow)) {
+                if (Input.GetKeyUp (KeyCode.LeftArrow)) {
 					if (transform.position.x > MainScript.leftBound + MainScript.tileW / 2) {
 						transform.position = transform.position + Vector3.left * MainScript.tileW;
 					}
@@ -43,19 +42,6 @@ public class CursorMovement : MonoBehaviour {
 			} else if (MovementType == 2) {
 			} else if (MovementType == 3) {
 			}
-<<<<<<< HEAD
-		}
-
-        /*
-        else if (MovementType == 1) {
-		} else if (MovementType == 2) {
-		} else if (MovementType == 3) {
-		}
-        */
-
-		//Debug.Log (transform.position);
-	}
-=======
 		}
 		//Debug.Log (transform.position);
 	}
@@ -66,14 +52,11 @@ public class CursorMovement : MonoBehaviour {
 			if (currBlock.position == myPos + Vector3.left * MainScript.tileW/2){
 				//currBlock.GetComponent<PuzzleBlockScript>().myCol++;
 				LeftSelectedBlock = currBlock.gameObject;
-				Debug.Log(currBlock.transform.position);
 			}
 			if (currBlock.position == myPos + Vector3.right * MainScript.tileW/2){
 				//currBlock.GetComponent<PuzzleBlockScript>().myCol--;
 				RightSelectedBlock = currBlock.gameObject;
-				Debug.Log(currBlock.transform.position);
 			}
 		}
 	}
->>>>>>> origin/master
 }

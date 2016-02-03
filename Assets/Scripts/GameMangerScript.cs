@@ -38,12 +38,9 @@ public class GameMangerScript : MonoBehaviour {
 		//CheckStartingBlocks ();
 
 		topBound = bottomBound + tileH * (numRow + 4);
-<<<<<<< HEAD
-		GameObject GameCursor = (GameObject)Instantiate(PuzzCursor, (Vector2.right * tileW/2), transform.rotation);
-        GameCursor.name = "Player Cursor";
-=======
+
 		GameCursor = (GameObject)Instantiate(PuzzCursor, (Vector2.right * tileW/2), transform.rotation);
->>>>>>> origin/master
+        GameCursor.name = "Player Cursor";
 		Camera.main.transform.position = cameraPos;
 	}
 
@@ -56,25 +53,8 @@ public class GameMangerScript : MonoBehaviour {
 
 	public IEnumerator CurrentSelectedBlocks(GameObject LBlock, GameObject RBlock, float moveTime){
 		float timer = 0.0f;
-<<<<<<< HEAD
-        stopMove = true;
-
-		for (int i = 0; i < BlockParent.transform.childCount; i++) {
-			Transform currBlock = BlockParent.transform.GetChild (i);
-			if (myPos == currBlock.position - Vector3.left * tileW / 2) {
-				LeftBlock = currBlock.gameObject;
-				LeftPos = LeftBlock.transform.position;
-				LeftBlock.GetComponent<PuzzleBlockScript> ().myCol++;
-			}
-			if (myPos == currBlock.position - Vector3.right * tileW / 2) {
-				RightBlock = currBlock.gameObject;
-				RightPos = RightBlock.transform.position;
-				RightBlock.GetComponent<PuzzleBlockScript> ().myCol--;
-			}
-		}
-=======
 		GameCursor.GetComponent<CursorMovement> ().cursorMove = false;
-		/*for (int i = 0; i < BlockParent.transform.childCount; i++) {
+        /*for (int i = 0; i < BlockParent.transform.childCount; i++) {
 			Transform currBlock = BlockParent.transform.GetChild(i);
 			if (PuzzCursorPos == currBlock.position - Vector3.left * tileW/2){
 				LeftBlock = currBlock.gameObject;
@@ -86,41 +66,40 @@ public class GameMangerScript : MonoBehaviour {
 				RightPos = RightBlock.transform.position;
 				RightBlock.GetComponent<PuzzleBlockScript>().myCol--;
 			}
-		}*/
-
-//		for (int i = 0; i < BlockParent.transform.childCount; i++) {
-//			Transform currBlock = BlockParent.transform.GetChild (i);
-//			if (myPos == currBlock.position - Vector3.left * tileW / 2) {
-//				LBlock = currBlock.gameObject;
-//				LeftPos = LBlock.transform.position;
-//				LBlock.GetComponent<PuzzleBlockScript> ().myCol++;
-//			}
-//			if (myPos == currBlock.position - Vector3.right * tileW / 2) {
-//				RBlock = currBlock.gameObject;
-//				RightPos = RBlock.transform.position;
-//				RBlock.GetComponent<PuzzleBlockScript> ().myCol--;
-//			}
-//		}
-
-		LeftPos = LBlock.transform.position;
-		RightPos = RBlock.transform.position;
->>>>>>> origin/master
-
-		while (timer <= moveTime) {
-			LBlock.transform.position = Vector3.Lerp (LBlock.transform.position, RightPos, BlockMoveSpeed.Evaluate(timer/moveTime));
-			RBlock.transform.position = Vector3.Lerp (RBlock.transform.position, LeftPos, BlockMoveSpeed.Evaluate(timer/moveTime));
-			timer += Time.deltaTime;
-			if (LBlock.transform.position.x > RightPos.x - 0.01f && RBlock.transform.position.x > LeftPos.x - 0.01f){
-				LBlock.transform.position = RightPos;
-				RBlock.transform.position = LeftPos;
-			}
-			yield return null;
 		}
-<<<<<<< HEAD
-        stopMove= false;
-=======
-		GameCursor.GetComponent<CursorMovement> ().cursorMove = true;
->>>>>>> origin/master
+
+		for (int i = 0; i < BlockParent.transform.childCount; i++) {
+			Transform currBlock = BlockParent.transform.GetChild (i);
+			if (myPos == currBlock.position - Vector3.left * tileW / 2) {
+				LBlock = currBlock.gameObject;
+				LeftPos = LBlock.transform.position;
+				LBlock.GetComponent<PuzzleBlockScript> ().myCol++;
+			}
+			if (myPos == currBlock.position - Vector3.right * tileW / 2) {
+				RBlock = currBlock.gameObject;
+				RightPos = RBlock.transform.position;
+				RBlock.GetComponent<PuzzleBlockScript> ().myCol--;
+  			}
+    	}*/
+
+        LeftPos = LBlock.transform.position;
+		RightPos = RBlock.transform.position;
+
+        while (timer <= moveTime) {
+            LBlock.transform.position = Vector3.Lerp(LBlock.transform.position, RightPos, BlockMoveSpeed.Evaluate(timer / moveTime));
+            RBlock.transform.position = Vector3.Lerp(RBlock.transform.position, LeftPos, BlockMoveSpeed.Evaluate(timer / moveTime));
+            timer += Time.deltaTime;
+            if (LBlock.transform.position.x > RightPos.x - 0.01f && RBlock.transform.position.x > LeftPos.x - 0.01f) {
+                LBlock.transform.position = RightPos;
+                RBlock.transform.position = LeftPos;
+            }
+            yield return null;
+        }
+        BlockParent.BroadcastMessage("CheckAdjBlocks", Vector2.left);
+        BlockParent.BroadcastMessage("CheckAdjBlocks", Vector2.up);
+        BlockParent.BroadcastMessage("CheckAdjBlocks", Vector2.right);
+        BlockParent.BroadcastMessage("CheckAdjBlocks", Vector2.down);
+        GameCursor.GetComponent<CursorMovement> ().cursorMove = true;
 	}
 
 	void PuzzleBlockSpawning(){
@@ -168,8 +147,7 @@ public class GameMangerScript : MonoBehaviour {
 		} else if(dir == "bottom"){
 			a = -1;
 		}
-
-
+ 
 		GameObject currItem = GameObject.Find((i+a) + "," + (j+b));
 		if (nBlock.GetComponent<PuzzleBlockScript>().BlockColorInt == currItem.GetComponent<PuzzleBlockScript>().BlockColorInt){
 			nBlock.GetComponent<PuzzleBlockScript>().BlockColorInt = Random.Range(0,numOfColors);
@@ -189,10 +167,5 @@ public class GameMangerScript : MonoBehaviour {
                 lastPuzzTime = Time.time;
             }
         }
-    }
-
-    void RenameBlocks()
-    {
-
     }
 }
