@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class CursorMovement : MonoBehaviour {
-	public enum mType {KB, Mouse, Gamepad, Mobile}; //Keyboard, Mouse, Gamepad, Touch/Mobile
+	enum mType {KB, Mouse, Gamepad, Mobile}; //Keyboard, Mouse, Gamepad, Touch/Mobile
+
+    mType controlStyle;
 	GameMangerScript MainScript;
 	public bool cursorMove = true;
 	public GameObject LeftSelectedBlock, RightSelectedBlock;
@@ -16,7 +18,7 @@ public class CursorMovement : MonoBehaviour {
 	void Update () {
 		SelectedBlocks(this.transform.position);
 		if (cursorMove) {
-			if (mType == mType.KB) {
+			if (controlStyle == mType.KB) {
 				if (Input.GetKeyUp (KeyCode.Space)) {
 					StartCoroutine (MainScript.CurrentSelectedBlocks (LeftSelectedBlock, RightSelectedBlock, 0.25f));
                 }
@@ -38,9 +40,9 @@ public class CursorMovement : MonoBehaviour {
 						transform.position = transform.position + Vector3.down * MainScript.tileH;
 					}
 				}
-			} else if (mType == mType.Mouse) {
-			} else if (mType == mType.Gamepad) {
-			} else if (mType == mType.Mobile) {
+			} else if (controlStyle == mType.Mouse) {
+			} else if (controlStyle == mType.Gamepad) {
+			} else if (controlStyle == mType.Mobile) {
 			}
 		}
 		//Debug.Log (transform.position);

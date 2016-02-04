@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -14,7 +15,7 @@ public class GameMangerScript : MonoBehaviour {
     float PuzzAddInterval = 2f; float lastPuzzTime;
     bool stopMove;
 	public float tileW; public float tileH;
-	Vector3 StartPos = Vector3.zero;
+	public Vector3 StartPos = Vector3.zero;
 	Vector2 LeftPos; Vector3 RightPos;
 	GameObject GameCursor;
 	int numCol = 6;
@@ -29,12 +30,13 @@ public class GameMangerScript : MonoBehaviour {
 		tileW = PuzzBlock.GetComponent<Renderer> ().bounds.size.x;
 		tileH = PuzzBlock.GetComponent<Renderer> ().bounds.size.y;
 
-		PuzzFieldW = (numCol - 1) * tileW + 8f;
+        PuzzFieldW = (numCol - 1) * tileW + 8f;
 		cameraPos = new Vector3 (PuzzFieldW / 2, 66f, -10);
 		BlockParent = new GameObject ("Puzzle Blocks");
+        //BlockParent.transform.position = new Vector3(BlockParent.transform.position.x - (PuzzFieldW / 2), BlockParent.transform.position.y, BlockParent.transform.position.z);
 
-		//Puzzle Block Spawning
-		PuzzleBlockSpawning ();
+        //Puzzle Block Spawning
+        PuzzleBlockSpawning();
 		//CheckStartingBlocks ();
 
 		topBound = bottomBound + tileH * (numRow + 4);
